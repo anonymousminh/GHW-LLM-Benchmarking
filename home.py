@@ -32,6 +32,20 @@ def call_gemini(prompt):
 
     return response.text, end - start, token_count
 
+def call_llama(prompt):
+    start = time.time()
+    groq_response = groq_client.chat.completions.create(model='meta-llama/llama-4-maverick-17b-128e-instruct',
+                                                        messages=[
+                                                            {
+                                                                "role": "user",
+                                                                "content": prompt
+                                                            }
+                                                        ], temperature=0.5)
+    
+    end  = time.time()
+    content = groq_response.choices[0].message
+    token_count = groq_response.usage.total_tokens
+    return content, end - start, token_count
 
 
 
