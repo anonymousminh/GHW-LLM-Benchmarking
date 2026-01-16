@@ -1,6 +1,6 @@
 # LLM-Benchmarking
 
-A small Streamlit app to benchmark and compare LLM responses and throughput (tokens/sec) side-by-side. The app calls Google Gemini and Groq Llama models and displays latency, token usage, and a simple bar chart.
+A small Streamlit app to benchmark and compare LLM responses and throughput (tokens/sec) side-by-side. The app calls Google Gemini and Groq Llama models and displays latency, token usage, and a simple bar chart. (will add more models in the future)
 
 ## Features
 
